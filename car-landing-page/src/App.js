@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Background from "./Components/Background/Background.js";
+import NavigationBar from "./Components/NavBar/NavigationBar.js";
+import Hero from "./Components/Hero/Hero.js";
 
 function App() {
+  let heroData = [
+    { text1: "Dive into", text2: "what you love" },
+    { text1: "Indulge", text2: "your passions" },
+    { text1: "Give in to", text2: "your passions" },
+  ];
+
+  const [heroCount, setHeroCount] = useState(1);
+  const [playStatus, setPlayStatus] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Background playStatus={playStatus} imageCount={heroCount} />
+      <NavigationBar />
+      <Hero
+        heroData={heroData[heroCount]}
+        imageCount={heroCount}
+        setHeroCount={setHeroCount}
+        playStatus={playStatus}
+        setPlayStatus={setPlayStatus}
+      />
     </div>
   );
 }
