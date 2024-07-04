@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  flex-wrap: wrap;
+  color: white;
+  font-family: "Merriweather", sans-serif;
+  margin-top: 5px;
+}
+
+.Nav-Menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  padding-inline: 20px;
+  list-style-type: none;
+}
+
+.Nav-Contact {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 7px;
+  margin-left: 10px;
+}
+
+.Nav-Logo {
+  font-size: 45px;
+  font-weight: 500;
+}
