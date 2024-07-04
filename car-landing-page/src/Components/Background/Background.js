@@ -7,7 +7,7 @@ import "./Background.css";
 export default function Background({ playStatus, imageCount }) {
   if (playStatus) {
     return (
-      <video className="background" autoPlay loop muted>
+      <video className="background fade-in" autoPlay loop muted>
         <source src={video1} type="video/mp4"></source>
       </video>
     );

@@ -11,3 +11,18 @@
   z-index: -1;
   object-fit: cover;
 }
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
